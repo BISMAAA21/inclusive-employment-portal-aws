@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Job Seeker";
+}
+
+@section Styles {
+    <link rel="stylesheet"
+          href="~/css/JobSeeker/JobSeeker.css"
+          asp-append-version="true" />
+}
+
+<div class="jobseeker-page">
+
+    <partial name="_JobSeekerSidebar" />
+
+    <main class="jobseeker-main">
+
+        <div class="welcome-section">
+
+            <h1>Welcome, @Context.Session.GetString("FullName")</h1>
+
+            <p>
+                Find job opportunities, manage your profile,
+                and keep track of your applications.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>

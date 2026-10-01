@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\CareerAdvisor\**" />
+    <Compile Remove="Models\Employer\**" />
+    <Content Remove="Models\CareerAdvisor\**" />
+    <Content Remove="Models\Employer\**" />
+    <EmbeddedResource Remove="Models\CareerAdvisor\**" />
+    <EmbeddedResource Remove="Models\Employer\**" />
+    <None Remove="Models\CareerAdvisor\**" />
+    <None Remove="Models\Employer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Employer\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Views\Employer\" />
+    <Folder Include="wwwroot\uploads\resumes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.102.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
